@@ -1,0 +1,107 @@
+# ═══════════════════════════════════════════════════════════════════
+# Alacritty — tez's config
+#   • JetBrains Mono Nerd Font
+#   • Transparent window (X11 + compositor)
+#   • Custom clean dark theme
+#   • Beam cursor — non-blinking, high-vis green
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Window ───────────────────────────────────────────────────────
+[window]
+# Overall window opacity (0.0 – 1.0). Needs a compositor on X11
+# (e.g. picom) for the transparency to show through.
+opacity = 0.85
+
+# Window size on first open (columns x rows)
+# dimensions = { columns = 120, lines = 40 }
+
+# Padding around the terminal content
+padding = { x = 8, y = 4 }
+
+# Live config reload — kept on by default
+# live_config_reload = true
+
+# decorations = "Full"   # Full | Yaru | Catppuccin | None
+#decorations = "None"   # uncomment for borderless — needs compositor for bg transparency
+
+# Startup mode: Windowed | Maximized | Fullscreen
+# startup_mode = "Windowed"
+
+# ── Font ────────────────────────────────────────────────────────
+[font]
+normal   = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold     = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic   = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+size = 12.0
+
+# Harfbuzz (shaping) — set true if you use non-Latin scripts
+# use_thin_strokes = true    # macOS only, ignored on X11
+
+# ── Colors — custom clean dark scheme ──────────────────────────
+[colors.primary]
+background = "#0d1117"   # deep dark base
+foreground = "#e6edf3"   # soft white text
+
+# ── Normal (0–7) ──────────────────────────────────────────────
+[colors.normal]
+black   = "#161b22"
+red     = "#ff7b72"
+green   = "#7ee787"
+yellow  = "#e3b341"
+blue    = "#79c0ff"
+magenta = "#c0a6f0"
+cyan    = "#96d3e6"
+white   = "#e6edf3"
+
+# ── Bright (8–15) ────────────────────────────────────────────
+[colors.bright]
+black   = "#484f58"
+red     = "#ff9aa2"
+green   = "#a7f0ba"
+yellow  = "#f9e48b"
+blue    = "#a5d6ff"
+magenta = "#d5b4ff"
+cyan    = "#c2e1ff"
+white   = "#ffffff"
+
+# ── Selection ─────────────────────────────────────────────────
+[colors.selection]
+text   = "#0d1117"
+background = "#2d4a6e"
+
+# ── Cursor ────────────────────────────────────────────────────
+[colors.cursor]
+text    = "#0d1117"   # text under the cursor
+cursor  = "#7ee787"   # cursor itself — bright green, pops on dark
+
+# ── Cursor shape & behaviour ─────────────────────────────────
+[cursor]
+# Beam style — thin vertical line, good for typing
+style = { shape = "Beam", blinking = "Off" }
+
+# ── Bell ──────────────────────────────────────────────────────
+[bell]
+# Visual bell (flashes the window) instead of audible
+# visual = true
+
+# ── Key bindings (a few quality-of-life ones) ─────────────────
+# Uncomment / edit as you like.  Alacritty's default bindings
+# (copy/paste, search, new tab/window) still work alongside these.
+#
+# [key_bindings]
+#   # Ctrl+Shift+E — open new window
+#   { key = "E", mods = "Control|Shift", action = "CreateNewWindow" }
+#
+#   # Ctrl+Shift+T — open new tab
+#   { key = "T", mods = "Control|Shift", action = "CreateNewTab" }
+#
+#   # Ctrl+Enter — toggle fullscreen
+#   { key = "Enter", mods = "Control", action = "ToggleFullscreen" }
+#
+#   # Ctrl+Shift+W — close tab/window
+#   { key = "W", mods = "Control|Shift", action = "CloseCurrentTab" }
+#
+#   # Ctrl+Shift+F — spawn a search prompt
+#   # (already bound by default, shown here as a reminder)
