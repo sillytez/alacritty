@@ -98,6 +98,21 @@ style = { shape = "Beam", blinking = "Off" }
 # Block cursor when in vi mode (visual selection feels natural)
 vi_mode_style = { shape = "Block", blinking = "Off" }
 
+# ── Vi-mode cursor color (matches normal cursor green) ────────
+[colors.vi_mode_cursor]
+text    = "#0d1117"
+cursor  = "#7ee787"
+
+# ── Search highlights (Ctrl+Shift+F) ────────────────────────────
+[colors.search]
+matches        = { foreground = "#0d1117", background = "#e3b341" }
+focused_match  = { foreground = "#0d1117", background = "#7ee787" }
+
+# ── URL hint labels (mouse.bindings hints below) ───────────────
+[colors.hints]
+start = { foreground = "#0d1117", background = "#e3b341" }
+end   = { foreground = "#e3b341", background = "#0d1117" }
+
 # ── Mouse ─────────────────────────────────────────────────────
 [mouse]
 # Hide the mouse cursor while typing
@@ -113,22 +128,37 @@ save_to_clipboard = true
 # Visual bell (flashes the window) instead of audible
 # visual = true
 
-# ── Key bindings (a few quality-of-life ones) ─────────────────
-# Uncomment / edit as you like.  Alacritty's default bindings
-# (copy/paste, search, new tab/window) still work alongside these.
-#
-# [key_bindings]
-#   # Ctrl+Shift+E — open new window
-#   { key = "E", mods = "Control|Shift", action = "CreateNewWindow" }
-#
-#   # Ctrl+Shift+T — open new tab
-#   { key = "T", mods = "Control|Shift", action = "CreateNewTab" }
-#
-#   # Ctrl+Enter — toggle fullscreen
-#   { key = "Enter", mods = "Control", action = "ToggleFullscreen" }
-#
-#   # Ctrl+Shift+W — close tab/window
-#   { key = "W", mods = "Control|Shift", action = "CloseCurrentTab" }
-#
-#   # Ctrl+Shift+F — spawn a search prompt
-#   # (already bound by default, shown here as a reminder)
+# ── Key bindings ───────────────────────────────────────────────
+# Alacritty's default bindings (copy/paste, search, font size on
+# Ctrl+Plus/Minus/0) still work alongside these.
+[keyboard]
+bindings = [
+  # Ctrl+Shift+V — toggle vi mode (cursor keys + text selection)
+  { key = "V", mods = "Control|Shift", action = "ToggleViMode" },
+
+  # Ctrl+Enter — toggle fullscreen
+  { key = "Enter", mods = "Control", action = "ToggleFullscreen" },
+
+  # Ctrl+Shift+E — open new window
+  { key = "E", mods = "Control|Shift", action = "CreateNewWindow" },
+]
+
+# ── Hints ──────────────────────────────────────────────────────
+# Ctrl+Shift+O — highlight URLs on screen; type the label to open.
+# (Built-in default, shown here for reference.)
+[hints]
+# Keep labels short & home-row friendly
+alphabet = "asdfghjkl"
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "O", mods = "Control|Shift" }
+
+# More suggestions if you want them:
+#   Ctrl+Shift+T  CreateNewTab        (needs 0.17+ tab support)
+#   Ctrl+Shift+W  CloseCurrentTab
+#   Ctrl+Shift+F  Search (default binding, mentioned for reference)
