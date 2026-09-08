@@ -37,7 +37,7 @@ sudo pacman -S picom
 mv ~/.config/alacritty ~/.config/alacritty.bak 2>/dev/null || true
 
 # 5. Clone and link (or copy) this repo
-git clone https://github.com/tez/alacritty-config.git
+git clone https://github.com/sillytez/alacritty-config.git
 mkdir -p ~/.config/alacritty
 cp alacritty-config/alacritty.toml ~/.config/alacritty/
 
