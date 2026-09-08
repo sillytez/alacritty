@@ -18,6 +18,12 @@ opacity = 0.85
 # Padding around the terminal content
 padding = { x = 8, y = 4 }
 
+# Center content & grow padding on resize instead of leaving dead space
+dynamic_padding = true
+
+# Snap resizes to whole character cells (no half-cut letters)
+resize_increments = true
+
 # Live config reload — kept on by default
 # live_config_reload = true
 
@@ -76,10 +82,31 @@ background = "#2d4a6e"
 text    = "#0d1117"   # text under the cursor
 cursor  = "#7ee787"   # cursor itself — bright green, pops on dark
 
+# ── Scrolling ──────────────────────────────────────────────────
+[scrolling]
+# Scrollback buffer size (max 100000)
+history = 50000
+
+# Lines scrolled per wheel tick
+multiplier = 3
+
 # ── Cursor shape & behaviour ─────────────────────────────────
 [cursor]
 # Beam style — thin vertical line, good for typing
 style = { shape = "Beam", blinking = "Off" }
+
+# Block cursor when in vi mode (visual selection feels natural)
+vi_mode_style = { shape = "Block", blinking = "Off" }
+
+# ── Mouse ─────────────────────────────────────────────────────
+[mouse]
+# Hide the mouse cursor while typing
+hide_when_typing = true
+
+# ── Selection ─────────────────────────────────────────────────
+[selection]
+# Also copy selections to the clipboard, not just primary buffer
+save_to_clipboard = true
 
 # ── Bell ──────────────────────────────────────────────────────
 [bell]
