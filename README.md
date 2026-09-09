@@ -5,6 +5,7 @@
   <img alt="Font" src="https://img.shields.io/badge/font-JetBrainsMono_Nerd_Font-7ee787?style=flat&labelColor=0d1117">
   <img alt="Theme" src="https://img.shields.io/badge/theme-GitHub_Dark-0d1117?style=flat&labelColor=0d1117&color=7ee787">
   <img alt="Opacity" src="https://img.shields.io/badge/opacity-0.85-79c0ff?style=flat&labelColor=0d1117">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat">
 </p>
 
 > My personal [Alacritty](https://alacritty.org/) terminal configuration —
