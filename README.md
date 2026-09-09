@@ -52,6 +52,8 @@
 
 ## 📋 Table of contents
 
+- [Features](#features)
+- [Palette](#palette)
 - [Dependencies](#dependencies)
 - [Install](#install)
   - [Per-distro quick install](#per-distro-quick-install)
