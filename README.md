@@ -170,7 +170,7 @@ oxwm.autostart("picom")
 oxwm.autostart("xwallpaper --center ~/walls/whysoetude247.jpg")
 ```
 
-Full setup at [sillytez/oxwm-sddm](https://github.com/sillytez/oxwm-sddm).
+Full setup at [sillytez/oxwm](https://github.com/sillytez/oxwm).
 
 ## 🪟 Autostart on other WMs / DEs
 
