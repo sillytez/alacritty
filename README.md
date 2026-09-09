@@ -11,7 +11,7 @@
 > a clean, minimal, GitHub-dark themed terminal with transparent windows,
 > a bright green beam cursor, and sensible keybindings.
 
-## ✨ Features
+## Features
 
 | | |
 |---|---|
@@ -25,7 +25,7 @@
 | ⌨️ **Keybinds** | vi-mode toggle, fullscreen, new window, URL hints |
 | 🎨 **Selection** | Hand-picked GitHub-dark selection colors |
 
-## 🎨 Palette
+## Palette
 
 | Color | Hex | Preview |
 |---|---|---|
@@ -50,7 +50,7 @@
 | selection bg | `#2d4a6e` | ![](https://img.shields.io/badge/-%20-2d4a6e?style=flat-square) |
 | cursor | `#7ee787` | ![](https://img.shields.io/badge/-%20-7ee787?style=flat-square) |
 
-## 📋 Table of contents
+## Table of contents
 
 - [Features](#features)
 - [Palette](#palette)
@@ -63,7 +63,7 @@
 - [Uninstall](#uninstall)
 - [Files](#files)
 
-## 📦 Dependencies
+## Dependencies
 
 | Dependency | Why | Notes |
 |---|---|---|
@@ -72,7 +72,7 @@
 | [picom](https://github.com/yshui/picom) (or any compositor) | makes the 0.85 window opacity show on X11 | optional — without it the window renders opaque |
 | X11 | transparency is compositor-based on X11 | on Wayland, opacity works via your compositor's own settings |
 
-## 📥 Install
+## Install
 
 ```bash
 # 1. Install alacritty (Arch)
@@ -156,7 +156,7 @@ sudo eopkg install alacritty picom jetbrains-mono
 
 </details>
 
-## 🖥️ My setup
+## My setup
 
 This config is tuned for my daily driver:
 
@@ -174,7 +174,7 @@ oxwm.autostart("xwallpaper --center ~/walls/whysoetude247.jpg")
 
 Full setup at [sillytez/oxwm](https://github.com/sillytez/oxwm).
 
-## 🪟 Autostart on other WMs / DEs
+## Autostart on other WMs / DEs
 
 The terminal itself doesn't care about your WM — the only WM-specific part is
 making sure a compositor runs so the transparency shows. Pick your setup:
@@ -265,7 +265,7 @@ xfconf-query -c xfwm4 -p /general/use_compositing -s true
 
 </details>
 
-## ⌨️ Keybindings
+## Keybindings
 
 | Keys | Action |
 |---|---|
@@ -279,13 +279,13 @@ xfconf-query -c xfwm4 -p /general/use_compositing -s true
 > **Note:** `Ctrl+Shift+V` is paste — vi-mode toggle is on `Ctrl+Shift+Space`
 > so nothing can shadow it.
 
-## 🗑️ Uninstall
+## Uninstall
 
 ```bash
 rm -rf ~/.config/alacritty
 ```
 
-## 📄 Files
+## Files
 
 | File | Description |
 |---|---|
