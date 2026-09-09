@@ -87,9 +87,9 @@ sudo pacman -S picom
 mv ~/.config/alacritty ~/.config/alacritty.bak 2>/dev/null || true
 
 # 5. Clone and link (or copy) this repo
-git clone https://github.com/sillytez/alacritty-config.git
+git clone https://github.com/sillytez/alacritty.git
 mkdir -p ~/.config/alacritty
-cp alacritty-config/alacritty.toml ~/.config/alacritty/
+cp alacritty/alacritty.toml ~/.config/alacritty/
 
 # 6. Run picom once (or add it to your WM autostart), then launch
 picom &
